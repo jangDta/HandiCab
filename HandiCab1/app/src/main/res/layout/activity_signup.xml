@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hello.handicab1.SignupActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:text="개인정보"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/main"
+                android:layout_gravity="center"/>
+
+            <EditText
+                android:id="@+id/signup_name"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:hint="이름"
+                android:layout_gravity="center"/>
+            <EditText
+                android:id="@+id/signup_phone"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:hint="전화번호"
+                android:inputType="phone"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:text="보호자 연락처"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/main"
+                android:layout_gravity="center"/>
+
+            <EditText
+                android:id="@+id/signup_parent_phone"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:hint="전화번호"
+                android:inputType="phone"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:text="특이사항"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/main"
+                android:layout_gravity="center"/>
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:rowCount="4"
+                android:columnCount="3">
+                <CheckBox
+                    android:id="@+id/check1"
+                    android:text=" 지체장애  "
+                    android:textSize="20sp"
+                    android:button="@drawable/selector_checkbox"/>
+                <CheckBox
+                    android:id="@+id/check2"
+                    android:text=" 청각장애  "
+                    android:textSize="20sp"
+                    android:button="@drawable/selector_checkbox"/>
+                <CheckBox
+                    android:id="@+id/check3"
+                    android:text=" 시각장애  "
+                    android:textSize="20sp"
+                    android:button="@drawable/selector_checkbox"/>
+                <CheckBox
+                    android:id="@+id/check4"
+                    android:text=" 언어장애  "
+                    android:textSize="20sp"
+                    android:button="@drawable/selector_checkbox"/>
+                <CheckBox
+                    android:id="@+id/check5"
+                    android:text=" 뇌병변  "
+                    android:textSize="20sp"
+                    android:button="@drawable/selector_checkbox"/>
+                <CheckBox
+                    android:id="@+id/check6"
+                    android:text=" 심장장애  "
+                    android:textSize="20sp"
+                    android:button="@drawable/selector_checkbox"/>
+                <CheckBox
+                    android:id="@+id/check7"
+                    android:text=" 정신지체  "
+                    android:textSize="20sp"
+                    android:button="@drawable/selector_checkbox"/>
+                <CheckBox
+                    android:id="@+id/check8"
+                    android:text=" 정신장애  "
+                    android:textSize="20sp"
+                    android:button="@drawable/selector_checkbox"/>
+                <CheckBox
+                    android:id="@+id/check9"
+                    android:text=" 발달장애  "
+                    android:textSize="20sp"
+                    android:button="@drawable/selector_checkbox"/>
+            </GridLayout>
+
+            <EditText
+                android:id="@+id/signup_another"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:hint="기타 특이사항"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:text="요청사항"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/main"
+                android:layout_gravity="center"/>
+
+            <EditText
+                android:id="@+id/signup_need"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:minLines="6"
+                android:maxLines="10"
+                android:scrollbars="vertical"
+                android:textColorHint="#FFFF6347"
+                android:hint="메인화면에 나타날 요청사항입니다.\n최대한 자세하게 작성해주세요."/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:text="회원가입"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:background="@color/main"
+                android:onClick="requestSignup"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

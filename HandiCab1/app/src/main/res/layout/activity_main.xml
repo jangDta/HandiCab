@@ -1,18 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main"
     tools:context="com.hello.handicab1.MainActivity">
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World! ㅈㅁㅍㄷㅁㅍ\\\"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="로그아웃"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@color/transparent"
+        android:textColor="@color/white"
+        android:layout_marginRight="15dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="15dp"
+        android:onClick="logoutClick"/>
 
-</android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/selector_call_parent"
+        android:onClick="callParent"/>
+
+    <TextView
+        android:id="@+id/main_need"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:background="@drawable/main_userbg"
+        android:fadeScrollbars="true"
+        android:padding="25dp"
+        android:scrollbars="vertical"
+        android:text="안녕하세요 반가븝니다\n어디가세요 이리오세요 안녕하세요\n어디가세요\n어디가세요\n어디가세요\n어디가세요\n어디가세요\n어디가세요\n어디가세요\n어디가세요\n어디가세요\n어디가세요\n어디가세요 반갑습니다 어디가세요"
+        android:textSize="18sp" />
+
+    <Button
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/main_call"
+        android:onClick="callTaxi"/>
+
+
+
+
+</LinearLayout>

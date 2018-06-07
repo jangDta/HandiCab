@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main"
+    tools:context="com.hello.handicab1.LoginActivity">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_name"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="35dp"/>
+        <EditText
+            android:id="@+id/login_name"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:hint="이름"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_phone"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="35dp"/>
+        <EditText
+            android:id="@+id/login_phone"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:inputType="phone"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:hint="전화번호"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:background="@drawable/selector_login"
+        android:onClick="loginClick"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입 하기"
+        android:textSize="20sp"
+        android:background="@color/transparent"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:onClick="signupClick"
+        />
+
+</LinearLayout>
