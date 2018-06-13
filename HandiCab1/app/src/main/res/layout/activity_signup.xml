@@ -78,47 +78,47 @@
                 android:columnCount="3">
                 <CheckBox
                     android:id="@+id/check1"
-                    android:text=" 지체장애  "
+                    android:text="지체장애"
                     android:textSize="20sp"
                     android:button="@drawable/selector_checkbox"/>
                 <CheckBox
                     android:id="@+id/check2"
-                    android:text=" 청각장애  "
+                    android:text="청각장애"
                     android:textSize="20sp"
                     android:button="@drawable/selector_checkbox"/>
                 <CheckBox
                     android:id="@+id/check3"
-                    android:text=" 시각장애  "
+                    android:text="시각장애"
                     android:textSize="20sp"
                     android:button="@drawable/selector_checkbox"/>
                 <CheckBox
                     android:id="@+id/check4"
-                    android:text=" 언어장애  "
+                    android:text="언어장애"
                     android:textSize="20sp"
                     android:button="@drawable/selector_checkbox"/>
                 <CheckBox
                     android:id="@+id/check5"
-                    android:text=" 뇌병변  "
+                    android:text="뇌병변"
                     android:textSize="20sp"
                     android:button="@drawable/selector_checkbox"/>
                 <CheckBox
                     android:id="@+id/check6"
-                    android:text=" 심장장애  "
+                    android:text="심장장애"
                     android:textSize="20sp"
                     android:button="@drawable/selector_checkbox"/>
                 <CheckBox
                     android:id="@+id/check7"
-                    android:text=" 정신지체  "
+                    android:text="정신지체"
                     android:textSize="20sp"
                     android:button="@drawable/selector_checkbox"/>
                 <CheckBox
                     android:id="@+id/check8"
-                    android:text=" 정신장애  "
+                    android:text="정신장애"
                     android:textSize="20sp"
                     android:button="@drawable/selector_checkbox"/>
                 <CheckBox
                     android:id="@+id/check9"
-                    android:text=" 발달장애  "
+                    android:text="발달장애"
                     android:textSize="20sp"
                     android:button="@drawable/selector_checkbox"/>
             </GridLayout>
