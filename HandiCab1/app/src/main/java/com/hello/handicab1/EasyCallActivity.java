@@ -145,7 +145,8 @@ public class EasyCallActivity extends AppCompatActivity implements OnMapReadyCal
             LatLng SEOUL2 = new LatLng(gps.getLatitude(), gps.getLongitude());
             MarkerOptions markerOptions = new MarkerOptions();
             markerOptions.position(SEOUL2);
-            markerOptions.title("현위치");
+            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.arm_up))
+                    .title("현위치");
             //markerOptions.snippet("석원이 집있슴2");
             this.map.addMarker(markerOptions);
 
@@ -232,7 +233,7 @@ public class EasyCallActivity extends AppCompatActivity implements OnMapReadyCal
     }
     public void textPointcheck(LatLng loc){
         markerOptions.position(loc)
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.call_taximark))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.favorite_locations_marker))
                 .title("목적지로 선택");
         map.addMarker(markerOptions);
         map.setOnMarkerClickListener(this);
@@ -261,7 +262,6 @@ public class EasyCallActivity extends AppCompatActivity implements OnMapReadyCal
                 double b= latLng.longitude;
                 MarkerOptions options = new MarkerOptions();
                 options.position(latLng)
-                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.call_taximark))
                         .alpha(0.5f);
                 map.addMarker(options);
                 map.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,15));
