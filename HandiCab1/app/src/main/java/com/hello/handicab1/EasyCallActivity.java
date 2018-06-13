@@ -3,12 +3,12 @@ package com.hello.handicab1;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -22,6 +22,11 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class EasyCallActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
     MapFragment mapFr; //
@@ -39,6 +44,10 @@ public class EasyCallActivity extends AppCompatActivity implements OnMapReadyCal
     GPSTracker gps =null;
     int pointcheck=0; // 택시마크인지 위치체크마크인지 구분
     int message_check=0;//메세지를 한 택시에만 보냈는지 체크하기위해서.
+
+    DatabaseReference db;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -147,18 +156,36 @@ public class EasyCallActivity extends AppCompatActivity implements OnMapReadyCal
     }
     //택시위치찍어줌 -1.
     public void texiPoint(GoogleMap map){
-        double lat;//위도
-        double lon;//경도
-        LatLng loc;
-        loc = new LatLng(37.543271,127.072286);textPointcheck(loc);
-        loc = new LatLng(37.525271,127.075086);textPointcheck(loc);
-        loc = new LatLng(37.557271,127.080286);textPointcheck(loc);
-        loc = new LatLng(37.537271,127.077086);textPointcheck(loc);
-        loc = new LatLng(37.568024,127.070489);textPointcheck(loc);
-        loc = new LatLng(37.548186,127.051629);textPointcheck(loc);
-        loc = new LatLng(37.517259,127.050826);textPointcheck(loc);
-        loc = new LatLng(37.514834,127.079935);textPointcheck(loc);
-        loc = new LatLng(37.544454,127.080194);textPointcheck(loc);
+        db = FirebaseDatabase.getInstance().getReference("TaxiDriver");
+        db.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+                    TaxiDriver taxiDriver = snapshot.getValue(TaxiDriver.class);
+                    if(taxiDriver.driverAvailable.equals("possible")){
+                        LatLng loc;
+                        loc = new LatLng(taxiDriver.driverLatitude,taxiDriver.driverLongitude);textPointcheck(loc);
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+//        double lat;//위도
+//        double lon;//경도
+//        LatLng loc;
+//        loc = new LatLng(37.543271,127.072286);textPointcheck(loc);
+//        loc = new LatLng(37.525271,127.075086);textPointcheck(loc);
+//        loc = new LatLng(37.557271,127.080286);textPointcheck(loc);
+//        loc = new LatLng(37.537271,127.077086);textPointcheck(loc);
+//        loc = new LatLng(37.568024,127.070489);textPointcheck(loc);
+//        loc = new LatLng(37.548186,127.051629);textPointcheck(loc);
+//        loc = new LatLng(37.517259,127.050826);textPointcheck(loc);
+//        loc = new LatLng(37.514834,127.079935);textPointcheck(loc);
+//        loc = new LatLng(37.544454,127.080194);textPointcheck(loc);
     }
     public void textPointcheck(LatLng loc){
         markerOptions.position(loc)

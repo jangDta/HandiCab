@@ -14,12 +14,13 @@
         android:gravity="right"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="70dp">
         <Button
             android:id="@+id/btn_gps"
             android:onClick="btn_gps"
-            android:background="@drawable/call_taximark"
+            android:background="@drawable/maps_and_flags"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

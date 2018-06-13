@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HandiCab1</string>
+    <string name="default_notification_channel_id">myChannelId</string>
+    <string name="default_notification_channel_name">myChannelName</string>
 </resources>
