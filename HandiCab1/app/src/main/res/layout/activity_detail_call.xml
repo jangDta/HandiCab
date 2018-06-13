@@ -5,11 +5,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.hello.handicab1.DetailCallActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+    <fragment
+        android:id="@+id/map2"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:gravity="right"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="detail call activity"
-        android:textSize="30sp"/>
+        android:background="@color/white">
+        <fragment
+            android:id="@+id/place_autocomplete_fragment1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+            />
+        <fragment
+            android:id="@+id/place_autocomplete_fragment2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+            />
+        <!--<EditText-->
+            <!--android:id="@+id/startAt"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="출발지"/>-->
+        <!--<EditText-->
+            <!--android:id="@+id/arriveAt"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="도착지"/>-->
+        <!--<EditText-->
+            <!--android:id="@+id/time"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="예약시간"/>-->
 
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
