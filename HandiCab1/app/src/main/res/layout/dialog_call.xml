@@ -24,8 +24,8 @@
             android:layout_marginTop="20dp"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="세부콜"
-            android:textSize="30sp"
+            android:text="즐겨찾기"
+            android:textSize="28sp"
             android:button="@drawable/selector_radio"
             android:layout_gravity="center"
             />

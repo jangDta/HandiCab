@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
                     if(myinfo.getUserPhone().equals(myphone) && myinfo.getUserName().equals(myname)) {
                         Log.v("yong", "통과");
                         autoLogin.putString("inputId", myname);
-                        autoLogin.putString("inputPwd", myphone);
+                        autoLogin.putString("inputPhone", myphone);
                         autoLogin.putString("inputNeed",myinfo.getUserNeed());
                         autoLogin.putString("inputParentPhone",myinfo.getUserParentPhone());
                         autoLogin.putString("inputHandicap", myinfo.getUserHandicap());

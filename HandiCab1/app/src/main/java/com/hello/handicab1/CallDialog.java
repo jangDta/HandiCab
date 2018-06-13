@@ -28,7 +28,7 @@ public class CallDialog extends Dialog{
                         selected = "간편콜";
                         break;
                     case R.id.dialog_radio_detail:
-                        selected = "세부콜";
+                        selected = "즐겨찾기";
                         break;
                         default:
                             break;

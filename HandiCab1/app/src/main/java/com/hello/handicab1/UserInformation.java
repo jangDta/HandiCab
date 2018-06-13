@@ -7,17 +7,19 @@ public class UserInformation {
     private String userParentPhone;
     private String userHandicap;
     private String userNeed;
+    private String userFavorite;
 
     public UserInformation(){
 
     }
 
-    public UserInformation(String userName, String userPhone, String userParentPhone, String userHandicap, String userNeed) {
+    public UserInformation(String userName, String userPhone, String userParentPhone, String userHandicap, String userNeed, String userFavorite) {
         this.userName = userName;
         this.userPhone = userPhone;
         this.userParentPhone = userParentPhone;
         this.userHandicap = userHandicap;
         this.userNeed = userNeed;
+        this.userFavorite = userFavorite;
     }
 
     public String getUserName() {
@@ -58,5 +60,13 @@ public class UserInformation {
 
     public void setUserNeed(String userNeed) {
         this.userNeed = userNeed;
+    }
+
+    public String getUserFavorite() {
+        return userFavorite;
+    }
+
+    public void setUserFavorite(String userFavorite) {
+        this.userFavorite = userFavorite;
     }
 }

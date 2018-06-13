@@ -280,6 +280,7 @@ public class MainActivity extends AppCompatActivity implements RecognitionListen
 
                     if(text.contains("집")){
                         textToSpeech.speak("집으로 갑니다으아아으으아아아",TextToSpeech.QUEUE_FLUSH,null,null);
+                        //자기위치 받아와야한다. 택시기사위치랑 내위치랑 비교 if 위도경도 차이가 0.07안에 있는 택시만 다 거리계산해서 제일 절대값작은걸 뽑는다.
                     }
                 }
 

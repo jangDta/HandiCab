@@ -50,7 +50,7 @@ public class SignupActivity extends AppCompatActivity {
         Log.v("yong",special);
 
         db = FirebaseDatabase.getInstance().getReference("User");
-        UserInformation user = new UserInformation(SignupName.getText().toString(), SignupPhone.getText().toString(), SignupParentPhone.getText().toString(),special, SignupNeed.getText().toString());
+        UserInformation user = new UserInformation(SignupName.getText().toString(), SignupPhone.getText().toString(), SignupParentPhone.getText().toString(),special, SignupNeed.getText().toString(),"");
         db.child(SignupPhone.getText().toString()).setValue(user);
 
         Intent intent = new Intent(this,LoginActivity.class);
