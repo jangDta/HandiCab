@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements RecognitionListen
     public void callTaxi(View view) {
 
         if(myHandicapList.contains("시각장애")){
-            textToSpeech.speak("목적지를 말씀하세요",TextToSpeech.QUEUE_FLUSH, null,null);
+            textToSpeech.speak("택시를 호출할까요?",TextToSpeech.QUEUE_FLUSH, null,null);
             handler = new Handler();
             handler.postDelayed(new Runnable(){
                 @Override
@@ -278,9 +278,9 @@ public class MainActivity extends AppCompatActivity implements RecognitionListen
                         Log.v("yong", "speech result : " + text.get(i));
                     }
 
-                    if(text.contains("집")){
-                        textToSpeech.speak("집으로 갑니다으아아으으아아아",TextToSpeech.QUEUE_FLUSH,null,null);
-                        //자기위치 받아와야한다. 택시기사위치랑 내위치랑 비교 if 위도경도 차이가 0.07안에 있는 택시만 다 거리계산해서 제일 절대값작은걸 뽑는다.
+                    if(text.contains("네")){
+                        textToSpeech.speak("택시를 호출합니다",TextToSpeech.QUEUE_FLUSH,null,null);
+                        //자기위치 받아와야한다. 택시기사위치랑 내위치랑 비교 if 위도경도 차이가 0.07안택에 있는 택시만 다 거리계산해서 제일 절대값작은걸 뽑는다.
                     }
                 }
 

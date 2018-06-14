@@ -249,7 +249,7 @@ public class EasyCallActivity extends AppCompatActivity implements OnMapReadyCal
             marker.remove();
             return false;
         }
-        Toast.makeText(getApplication(),"택시선택 \n"+"위도:"+a+"\t경도:"+b,Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplication(),"위치선택 \n"+"위도:"+a+"\t경도:"+b,Toast.LENGTH_LONG).show();
         return false;
     }
     //지도에 터치하면 마크생김
